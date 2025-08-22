@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASMOGRAPHIC — Tattoo Apparel</title>
+  <meta name="description" content="ASMOGRAPHIC — marque inspirée du tatouage : hoodies, t-shirts, accessoires.">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .goth { font-family: 'UnifrakturMaguntia', serif; letter-spacing: .02em }
+    .cinzel { font-family: 'Cinzel', serif }
+    #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#111;border:1px solid #2a2a2a;color:#e6dcc6;padding:10px 14px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+    #toast.show{opacity:1;bottom:32px}
+    #cart-count{display:none;align-items:center;justify-content:center;min-width:22px;height:22px;border-radius:999px;border:1px solid #2a2a2a;margin-left:6px;font-size:12px}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">
+        <img src="C:\Users\xavie\Desktop\asmographic\assets\monlogo.png.png" alt="Logo ASMOGRAPHIC" onerror="this.src='C:\Users\xavie\Desktop\asmographic\assets\monlogo.png.png'">
+        <span>ASMOGRAPHIC</span>
+      </a>
+      <nav class="menu">
+        <a href="#boutique">Boutique</a>
+        <a href="#lookbook">Lookbook</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+        <span id="cart-count" class="badge">0</span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero section">
+      <div>
+        <h1 class="cinzel">Textiles inspirés du tatouage.<br>Créés pour les tatoueurs & les tatoué·e·s.</h1>
+        <p>Esthétique mystique, noir & blanc, sérigraphie nette. Conçus en petites séries, pensés pour durer. Porte ton art — pas un logo vide.</p>
+        <div style="display:flex;gap:10px;margin-top:10px">
+          <a class="btn" href="#boutique">Voir la boutique</a>
+          <a class="btn" href="#lookbook">Lookbook</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="assets\TSHIRTBLANC.png" alt="Hoodie Asmographic">
+      </div>
+    </section>
+
+    <section id="boutique" class="section">
+      <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:10px">
+        <h2>Boutique</h2>
+        <span class="tag">Local only — pas de paiement réel</span>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <img src="assets\shooting.png" alt="Hoodie pentacle">
+          <div class="body">
+            <div>
+              <div>Hoodie Pentacle Eye</div>
+              <div class="tag">Sérigraphie / Noir</div>
+            </div>
+            <div>
+              <div class="price">64,00€</div>
+              <button class="btn" onclick="addToCart('Hoodie Pentacle Eye', 64)">Ajouter</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets\Design sans titre (1).png" alt="T-shirt œil">
+          <div class="body">
+            <div>
+              <div>T‑Shirt All‑Seeing</div>
+              <div class="tag">Coton épais / Noir</div>
+            </div>
+            <div>
+              <div class="price">34,00€</div>
+              <button class="btn" onclick="addToCart('T‑Shirt All‑Seeing', 34)">Ajouter</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets\casquette.png" alt="Cap">
+          <div class="body">
+            <div>
+              <div>Casquette ASMO</div>
+              <div class="tag">Broderie ton sur ton</div>
+            </div>
+            <div>
+              <div class="price">29,00€</div>
+              <button class="btn" onclick="addToCart('Casquette ASMO', 29)">Ajouter</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets\bandana.png" alt="Bandana">
+          <div class="body">
+            <div>
+              <div>Bandana Sigil</div>
+              <div class="tag">100% coton</div>
+            </div>
+            <div>
+              <div class="price">18,00€</div>
+              <button class="btn" onclick="addToCart('Bandana Sigil', 18)">Ajouter</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets\totebag.png" alt="Tote">
+          <div class="body">
+            <div>
+              <div>Tote Sacred Rose</div>
+              <div class="tag">Écru / Noir</div>
+            </div>
+            <div>
+              <div class="price">16,00€</div>
+              <button class="btn" onclick="addToCart('Tote Sacred Rose', 16)">Ajouter</button>
+            </div>
+          </div>
+        </div>
+          <div class="card">
+          <img src="assets\stickers.png" alt="jean">
+          <div class="body">
+            <div>
+              <div>Stickers</div>
+              <div class="tag">Écru / Noir</div>
+            </div>
+            <div>
+              <div class="price">5,00€</div>
+              <button class="btn" onclick="addToCart('stickers', 5)">Ajouter</button>
+            </div>
+          </div>
+        </div>
+          <div class="card">
+          <img src="assets\pantalon.png" alt="jean">
+          <div class="body">
+            <div>
+              <div>jean</div>
+              <div class="tag">Jean / Noir</div>
+            </div>
+            <div>
+              <div class="price">45,00€</div>
+              <button class="btn" onclick="addToCart('jean', 16)">Ajouter</button>
+            </div>
+          </div>
+        </div>
+          <div class="card">
+          <img src="assets\bonnet.png" alt="Tote">
+          <div class="body">
+            <div>
+              <div>bonnet</div>
+              <div class="tag">Écru / Noir</div>
+            </div>
+            <div>
+              <div class="price">16,00€</div>
+              <button class="btn" onclick="addToCart('bonnet', 16)">Ajouter</button>
+            </div>
+          </div>
+        </div>
+          <div class="card">
+          <img src="assets\coque.png" alt="Tote">
+          <div class="body">
+            <div>
+              <div>coque de telephone</div>
+              <div class="tag">Écru / Noir</div>
+            </div>
+            <div>
+              <div class="price">16,00€</div>
+              <button class="btn" onclick="addToCart('coque', 16)">Ajouter</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets\patch.png" alt="Patch">
+          <div class="body">
+            <div>
+              <div>Patch Ouroboros</div>
+              <div class="tag">Thermocollant</div>
+            </div>
+            <div>
+              <div class="price">8,00€</div>
+              <button class="btn" onclick="addToCart('Patch Ouroboros', 8)">Ajouter</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lookbook" class="section">
+      <h2>Lookbook</h2>
+      <div class="kv">
+        <div class="panel"><img src="assets/a_logo_for_"asmographic"_is_centered_on_a_beige,_t.png" alt="Logo/visuel" style="width:100%"></div>
+        <div class="panel"><img src="assets/a_logo_for_a_brand_named_"asmographic"_is_featured.png" alt="Logo/visuel" style="width:100%"></div>
+      </div>
+    </section>
+
+    <section id="apropos" class="section">
+      <h2>À propos</h2>
+      <div class="kv">
+        <div class="panel">
+          <p><strong>ASMOGRAPHIC</strong> est une marque née de l’atelier de tatouage : symboles mystiques, lettrages gothiques, lignes nettes. On crée d’abord pour les tatoueurs et les passionnés.</p>
+          <p>Chaque pièce est pensée pour la sérigraphie (encre dense, contrastes forts) et les broderies efficaces (logo “ASMO” compact).</p>
+        </div>
+        <div class="panel">
+          <p><strong>Collaborations tatoueurs</strong> — Tu es artiste ? Écris‑nous pour co‑signer une mini capsule (royalties et crédits clairs). Idéal pour conventions et pop‑ups.</p>
+          <a class="btn" href="#contact">Proposer une collab</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Newsletter</h2>
+      <form onsubmit="subscribe(event)" style="display:flex;gap:10px;max-width:520px">
+        <input id="email" class="input" type="email" placeholder="ton@email.com">
+        <button class="btn" type="submit">S’inscrire</button>
+      </form>
+      <p class="tag">Démo locale — aucune donnée n’est envoyée.</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Instagram : <a href="#" aria-label="Instagram">@asmographic</a> • TikTok : <a href="#">@asmographic</a> • Email : contact@asmographic.local</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+      <div>© 2025 ASMOGRAPHIC — Tous droits réservés.</div>
+      <div class="tag">Site de démonstration hors‑ligne</div>
+    </div>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

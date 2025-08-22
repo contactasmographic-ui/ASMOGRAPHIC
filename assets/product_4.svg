@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+<rect width="100%" height="100%" fill="#111"/>
+<rect x="80" y="160" width="640" height="680" fill="none" stroke="#e6dcc6" stroke-width="8"/>
+<text x="50%" y="60" fill="#e6dcc6" font-family="Georgia, serif" font-size="44" text-anchor="middle">ASMOGRAPHIC</text>
+<text x="50%" y="520" fill="#e6dcc6" font-family="Georgia, serif" font-size="56" text-anchor="middle">BANDANA</text>
+</svg>
